@@ -1,0 +1,2 @@
+-- This file will be very similar to read_products.sql, however we need to add a where statement so we don't get all the products. We'll want to use a parameter so we can dynamically select a product by product_id.....since we are using a parameter for the ID, we'll change value to $1. The final syntax will look like:
+SELECT * FROM product WHERE product_id = $1;
