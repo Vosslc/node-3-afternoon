@@ -8,7 +8,7 @@ module.exports = {
     const dbInstance = req.app.get('db');
     const {name, description, price, image_url} = req.body; //this is a parameter
 //When adding parameters to sql, all you have to do is pass in an array as the first argument and then the element(s) in the array map to $1, $2, etc... For example: dbInstance.create_product([ name, description, price, image_url ]), name is $1, description is $2, price is $3, and image_url is $4. Remember, if you have only one argument, you do not need to pass it in an array.
-
+console.log(req.body)
     dbInstance.create_product([ name, description, price, image_url ])
       .then( () => res.sendStatus(200) )
       .catch( err => {
